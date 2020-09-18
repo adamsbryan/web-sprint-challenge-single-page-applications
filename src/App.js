@@ -1,11 +1,21 @@
 import React from "react";
+import Form from "./Form";
+import HomePage from "./HomePage";
+import {Route, Switch} from "react-router-dom";
 
-const App = () => {
+export default function App() {
   return (
-    <>
-      <h1>Lambda Eats</h1>
-      <p>You can remove this code and create your own header</p>
-    </>
+    <div className="App">
+      
+      <Switch>
+        <Route path = "/pizza">
+          <Form />
+        </Route>
+        <Route path = "/">
+          <HomePage />
+        </Route>  
+      </Switch>
+
+    </div>
   );
-};
-export default App;
+}
